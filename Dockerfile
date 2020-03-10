@@ -8,4 +8,4 @@ WORKDIR /home/project
 # 向外提供3000端口
 EXPOSE 7001
 # 容器创建完成后执行的命令
-CMD npm install --registry=https://registry.npm.taobao.org && npm start
+CMD npm install --registry=https://registry.npm.taobao.org && npm start && tail -f /dev/null
