@@ -24,7 +24,7 @@ module.exports = appInfo => {
   };
   config.mysql = {
     client: {
-      host: "service_mysql",
+      host: "localhost",
       port: "3306",
       user: "root",
       password: "",
@@ -33,14 +33,6 @@ module.exports = appInfo => {
     app: true,
     agent: false
   };
-  config.redis =
-    {
-      client: {
-        port: 6379,
-        host: "service_redis",
-        db: 0
-      }
-    };
   config.security = {
     csrf: {
       enable: false
