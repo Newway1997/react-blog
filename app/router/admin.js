@@ -31,4 +31,29 @@ module.exports = app => {
     adminauth,
     controller.admin.main.getArticleById
   );
+  router.get(
+    "/admin/getUserInfo",
+    adminauth,
+    controller.admin.main.getUserInfo
+  );
+  router.post("/admin/addAccount", adminauth, controller.admin.main.addAccount);
+  router.post(
+    "/admin/updateAccount",
+    adminauth,
+    controller.admin.main.updateAccount
+  );
+  router.delete(
+    "/admin/deleteAccount/:id",
+    adminauth,
+    controller.admin.main.deleteAccount
+  );
+  router.post("/admin/upload", controller.admin.upload.index);
+  router.post("/admin/updateUser", controller.admin.main.updateUser);
+  router.get("/admin/getAdverts", adminauth, controller.admin.main.getAdverts);
+  router.post("/admin/addAdvert", adminauth, controller.admin.main.addAdvert);
+  router.delete(
+    "/admin/deleteAdvert/:id",
+    adminauth,
+    controller.admin.main.deleteAdvert
+  );
 };
